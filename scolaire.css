@@ -1,0 +1,571 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --bg-color: #1f1f21;
+    --text-color: #fff;
+    --main-color: #ffae00;
+    --big-font: 7rem;
+    --p-font: 1.1rem;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 15%;
+    background: transparent;
+    transition: all ease .45s;
+}
+
+.logo {
+    color: var(--text-color);
+    font-size: 41px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 25px;
+    transition: all ease .50s;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.menu-btn {
+    background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
+    box-shadow: 0px 20px 40px #00000070;
+    border: 1px solid #3b3b3b;
+    padding: 10px 20px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#menu-icon {
+    font-size: 28px;
+    margin-left: 10px;
+    z-index: 6;
+}
+
+section {
+    padding: 0 15%;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 70px;
+}
+
+.home-img {
+    width: 730px;
+    height: 730px;
+}
+
+.home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.home-text span {
+    padding: 5px 25px;
+    background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
+    box-shadow: 0px 20px 40px #00000070;
+    border: 1px solid #3b3b3b;
+    border-radius: 100px;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.home-text h1 {
+    font-size: var(--big-font);
+    margin: 23px 0;
+}
+
+.home-text p {
+    font-size: var(--p-font);
+    font-weight: 400;
+    color: #c3c3c3;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 34px;
+    background: var(--main-color);
+    color: var(--text-color);
+    border: 2px solid var(--main-color);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.6s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background: transparent;
+    color: var(--main-color);
+}
+
+.two {
+    background: #141414;
+    border: 2px solid #141414;
+    color: var(--text-color);
+    margin-left: 25px;
+}
+
+.two:hover {
+    color: #141414;
+    background: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.share {
+    position: absolute;
+    bottom: 3rem;
+    left: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.share p {
+    font-size: 17px;
+    color: var(--text-color);
+    margin-right: 25px;
+}
+
+.social i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
+    box-shadow: 0px 20px 40px #00000070;
+    border: 1px solid #3b3b3b;
+    border-radius: 50%;
+    color: var(--text-color);
+    font-size: 20px;
+    margin: 0 7px;
+    transition: all 0.6s ease-in-out;
+}
+
+.social i:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 1850px) {
+    header {
+        padding: 15px 8%;
+        transition: .2s;
+    }
+    section {
+        padding: 0 8%;
+        transition: .2s;
+    }
+    .share {
+        left: 8%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1370px) {
+    header {
+        padding: 15px 4%;
+        transition: .2s;
+    }
+    section {
+        padding: 0 4%;
+        transition: .2s;
+    }
+    .share {
+        left: 4%;
+        transition: .2s;
+    }
+    :root {
+        --big-font: 5.5rem;
+        --p-font: 1rem;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1020px) {
+    .navbar a {
+        margin: 0 15px;
+    }
+    :root {
+        --big-font: 5rem;
+        --p-font: 1rem;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 950px) {
+    .share {
+        display: none;
+    }
+    section {
+        padding: 70px 4%;
+    }
+    header {
+        padding: 11px 4%;
+        background: #2d2d2d;
+    }
+    .home {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .home-text {
+        order: 2;
+    }
+    .home-img {
+        margin: auto;
+        height: auto;
+        width: auto;
+    }
+    .home-img img {
+        max-width: 450px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        padding: 40px 50px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #2d2d2d;
+        transition: all 0.4s ease-in-out;
+    }
+    .navbar a {
+        display: block;
+        color: #c3c3c3;
+        padding: 0px;
+        margin: 0px 0px 40px 0px;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .navbar.open {
+        left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        --big-font: 
+    }
+}
+.timeline {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    height: 80vh;
+    /* Hauteur de la ligne */
+    display: flex;
+    align-items: flex-start;
+}
+
+.line {
+    width: 6px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.point {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.point.first {
+    top: 0%;
+}
+
+.point.secound {
+    top: 50%;
+}
+
+.point.third {
+    top: 100%;
+}
+.year.first {
+    top: 3%;
+}
+
+.year.secound {
+    top: 53%;
+}
+
+.year.third {
+    top: 97%;
+}
+.box.first {
+    top: 1%;
+    left: 4%;
+}
+
+.box.secound {
+    top: 38%;
+    left: 57%;
+}
+
+.box.third {
+    top: 74%;
+    left: 4%;
+}
+
+.year {
+    position: absolute;
+    top: calc(50% + 30px);
+    /* Décale le texte sous le point */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: white;
+    white-space: nowrap;
+}
+
+.box {
+    position: absolute;
+    height: 11rem;
+    width: 21rem;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #555;
+}
+/* ... Votre code CSS existant ... */
+
+/* Styles pour les cartes (box) */
+.box {
+background-color: #f8f9fa; /* Couleur de fond */
+border: 1px solid #ced4da; /* Bordure */
+border-radius: 8px; /* Bordure arrondie */
+padding: 20px; /* Espacement intérieur */
+margin-bottom: 20px; /* Marge en bas */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Styles spécifiques pour les titres des cartes */
+.box h4 {
+font-size: 1.5rem;
+margin-bottom: 10px;
+}
+
+/* Styles spécifiques pour les paragraphes des cartes */
+.box p {
+font-size: 1rem;
+color: #555;
+margin-bottom: 5px;
+}
+
+.box {
+display: flex; /* Utilisation de flexbox */
+flex-direction: column; /* Disposition en colonne */
+background-color: #f8f9fa;
+border: 1px solid #ced4da;
+border-radius: 8px;
+padding: 20px;
+margin-bottom: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles spécifiques pour les titres des cartes */
+.box h4 {
+font-size: 1.5rem;
+margin-bottom: 10px;
+}
+
+/* Styles spécifiques pour les paragraphes des cartes */
+.box p {
+font-size: 1rem;
+color: #555;
+margin-bottom: 5px;
+}
+.box {
+display: flex;
+flex-direction: column;
+background-color: #f8f9fa;
+border: 1px solid #ced4da;
+border-radius: 8px;
+padding: 20px;
+margin-bottom: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles spécifiques pour les titres des cartes */
+.box h4 {
+font-family: 'Rubik', sans-serif;
+font-size: 1.5rem;
+font-weight: bold;
+margin-bottom: 10px;
+color: #333;
+}
+
+/* Styles spécifiques pour les paragraphes des cartes */
+.box p {
+font-family: 'Rubik', sans-serif;
+font-size: 1rem;
+color: #555;
+margin-bottom: 5px;
+}
+
+/* ... Votre code CSS existant ... */
+
+.timeline {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    height: 80vh;
+    display: flex;
+    align-items: flex-start;
+}
+
+.line {
+    width: 6px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.point {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.point.first {
+    top: 0%;
+}
+
+.point.secound {
+    top: 50%;
+}
+
+.point.third {
+    top: 100%;
+}
+
+.year.first,
+.year.secound,
+.year.third {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: var(--text-color); /* Couleur des dates ajustée */
+    white-space: nowrap;
+}
+
+.box.first,
+.box.secound,
+.box.third {
+    position: absolute;
+    height: 11rem;
+    width: 21rem;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #555;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box.first h4,
+.box.secound h4,
+.box.third h4 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.box.first p,
+.box.secound p,
+.box.third p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+
+h4 {
+    font-family: 'Rubik', sans-serif; 
+    font-size: 36px; /* Taille de la police */
+    font-weight: bold; /* Gras */
+    color: antiquewhite; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    margin-top: 30px; /* Ajout de marge en haut pour l'espace */
+}
